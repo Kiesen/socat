@@ -1,4 +1,8 @@
-# Socat
+Socat
+=============
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Kiesen/socat/LICENSE)
+[![dependencies](https://david-dm.org/Kiesen/socat.svg)](https://david-dm.org/Kiesen/socat.svg)
+[![Build Status](https://travis-ci.com/Kiesen/socat.svg?branch=master)](https://travis-ci.com/Kiesen/socat)
 
 Socat is a collection of functions to stream and analyze social media contributions.
 
