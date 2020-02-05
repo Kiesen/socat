@@ -4,7 +4,7 @@ Socat
 [![dependencies](https://david-dm.org/Kiesen/socat.svg)](https://david-dm.org/Kiesen/socat.svg)
 [![Build Status](https://travis-ci.com/Kiesen/socat.svg?branch=master)](https://travis-ci.com/Kiesen/socat)
 
-Socat is a collection of functions to stream and analyze social media contributions.
+Socat are a collection of functions to stream and analyze social media contributions.
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ Then check if the environment is activate. You should see the name of your creat
 (YOUR-ENV)
 ```
 
-For further information, for example how to enter and leave an environment, check out the website of either [virtualenv](https://virtualenv.pypa.io/en/latest/) or [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/). Now you should able to install the packages just as mentioned before. 
+For further information, for example how to enter and leave an environment, check out the website of either [virtualenv](https://virtualenv.pypa.io/en/latest/) or [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/). Now you should be able to install the packages just as mentioned before. 
 
 ```
 pip install -r requirments.txt
@@ -57,7 +57,7 @@ With docker you just need to run
 docker build -t YOUR-TAG . 
 ```
 
-Docker will now create an new image with all dependencies. The standard execuation behavior is to run all unittests. 
+Docker will now create a new image with all dependencies. The standard execuation behavior is to run all unittests. 
 If you want to enter the docker container you could execute the following command
 
 ```
@@ -84,7 +84,7 @@ If you want to stream social media entries you could run for example the followi
 python src/socat.py stream tweets -m 100 -l -v  
 ```
 
-which will start streaming tweets with an upper limite of 100, log and verbose mode enabled. 
+which will start streaming tweets with an upper limit of 100, log and verbose mode enabled. 
 The recived entries getting written to the data folder in your current working directory. If no data folder exist one will created.
 For each social media source you need to put your credentials in the `.env` file. Check the `.env.example` to see how it should look like. Also check out the `config.py` inside the `stream` directory. This file is used to hand in some default parameters, in the twitter case bounding boxes, languages and words to track. 
 
@@ -108,7 +108,7 @@ To start the topic detection process just run the following command
 python socat.py analyze -p /path/to/social_media_entries text -m KM -lang de 
 ```
 
-The `-p` path option is required and needs to be an directory containing valid social media entries. There are more optional arguments like `-m` which can be used to actually run the topic detection process only with a specific methode, like k-means. Also you can prefilter the entries by a language `-lang de`. You can find a list of all supported langauges here: [langdetect](https://pypi.org/project/langdetect/). The results of the topic detection process getting printed to the stdout. Also you can overwrite the default configs of the different steps and methods. Just have a look inside the `src/analyze/config.py`.   
+The `-p` path option is required and needs to be a directory containing valid social media entries. There are more optional arguments like `-m` which can be used to actually run the topic detection process only with a specific methode, like k-means. Also you can prefilter the entries by a language `-lang de`. You can find a list of all supported langauges here: [langdetect](https://pypi.org/project/langdetect/). The results of the topic detection process getting printed to the stdout. Also you can overwrite the default configs of the different steps and methods. Just have a look inside the `src/analyze/config.py`.   
 
 ## Running the tests
 
